@@ -1,8 +1,5 @@
 <?php
 /**
- * File: TaskCannotBeRemovedException.php - todo
- * zzz - 03/02/17 16:51
- * PHP Version 7
  *
  * @category None
  * @package  TodoTasks

@@ -1,8 +1,5 @@
 <?php
 /**
- * File: CreateTaskForm.php - todo
- * zzz - 04/02/17 10:58
- * PHP Version 7
  *
  * @category None
  * @package  TodoTasks

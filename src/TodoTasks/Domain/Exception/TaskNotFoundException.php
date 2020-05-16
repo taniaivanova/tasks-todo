@@ -1,8 +1,5 @@
 <?php
 /**
- * File: TaskNotFoundException.php - todo
- * zzz - 03/02/17 13:37
- * PHP Version 7
  *
  * @category None
  * @package  TodoTasks

@@ -1,8 +1,5 @@
 <?php
 /**
- * File: TaskRepositoryInterface.php - todo
- * zzz - 03/02/17 13:19
- * PHP Version 7
  *
  * @category None
  * @package  TodoTasks

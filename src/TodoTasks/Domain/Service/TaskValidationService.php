@@ -1,8 +1,5 @@
 <?php
 /**
- * File: TaskValidationService.php - todo
- * zzz - 04/02/17 19:12
- * PHP Version 7
  *
  * @category None
  * @package  TodoTasks

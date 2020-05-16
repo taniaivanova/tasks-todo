@@ -1,8 +1,5 @@
 <?php
 /**
- * File: TaskRepository.php - ltodo
- * zzz - 04/02/17 23:37
- * PHP Version 7
  *
  * @category None
  * @package  Ltodo

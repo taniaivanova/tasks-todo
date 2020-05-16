@@ -1,9 +1,6 @@
 <?php
 /**
- * File: TaskNameIsEmptyException.php - todo
- * zzz - 03/02/17 14:49
- * PHP Version 7
- *
+  *
  * @category None
  * @package  TodoTasks
  */

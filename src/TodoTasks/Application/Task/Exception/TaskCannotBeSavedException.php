@@ -1,8 +1,5 @@
 <?php
 /**
- * File: TaskCannotBeSavedException.php - todo
- * zzz - 03/02/17 16:00
- * PHP Version 7
  *
  * @category None
  * @package  TodoTasks
