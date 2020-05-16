@@ -1,0 +1,31 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <ul>
+    {% for task in remaining_tasks %}
+        <li>
+            {{ task.id }} - {{ task.name }} ({{ task.status }})
+            <a data-edit="{{ task.name }}" href="{{ path('task.update', { taskId: task.id }) }}">[Edit]</a>
+            |
+            <a data-done="{{ task.name }}" href="{{ path('task.complete', { taskId: task.id }) }}">[Done]</a>
+            |
+            <a data-remove="{{ task.name }}" href="{{ path('task.delete', { taskId: task.id }) }}">[X]</a>
+        </li>
+    {% endfor %}
+
+    {% for task in completed_tasks %}
+        <li>
+            {{ task.id }} - {{ task.name }} ({{ task.status }})
+            <a data-edit="{{ task.name }}" href="{{ path('task.update', { taskId: task.id }) }}">[Edit]</a>
+            |
+            <a data-redo="{{ task.name }}" href="{{ path('task.redo', { taskId: task.id }) }}">[Redo]</a>
+            |
+            <a data-remove="{{ task.name }}" href="{{ path('task.delete', { taskId: task.id }) }}">[X]</a>
+        </li>
+    {% endfor %}
+    </ul>
+
+    <a href="{{ path('task.create') }}">Create new</a>
+    |
+    <a href="{{ path('task.clean') }}">Clean</a>
+{% endblock %}

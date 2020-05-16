@@ -1,0 +1,11 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    <ul>
+        {% for error in errors %}
+            <li>{{ error }}</li>
+        {% endfor %}
+    </ul>
+
+    {{ form(update_task_form) }}
+{% endblock %}

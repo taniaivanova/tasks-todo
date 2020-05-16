@@ -1,0 +1,61 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/service_container.html
+parameters:
+#    parameter_name: value
+
+services:
+#    service_name:
+#        class: AppBundle\Directory\ClassName
+#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+
+    task.query:
+        class: TodoTasks\Application\Task\Query
+        autowire: true
+
+    task.command:
+        class: TodoTasks\Application\Task\Command
+        autowire: true
+
+    repository.task_repository:
+        class: TodoTasks\Infrastructure\Persistence\DoctrineORM\Repository\TaskRepository
+        factory: ['@doctrine.orm.default_entity_manager', getRepository]
+        arguments: ['TodoTasks\Domain\Task']
+
+    command.task.list:
+        class: Cli\CliBundle\Command\TaskListCommand
+        autowire: true
+        tags:
+            - { name: console.command }
+
+    command.task.create:
+        class: Cli\CliBundle\Command\TaskCreateCommand
+        autowire: true
+        tags:
+            - { name: console.command }
+
+    command.task.complete:
+        class: Cli\CliBundle\Command\TaskCompleteCommand
+        autowire: true
+        tags:
+            - { name: console.command }
+
+
+    command.task.redo:
+        class: Cli\CliBundle\Command\TaskRedoCommand
+        autowire: true
+        tags:
+            - { name: console.command }
+
+
+    command.task.update:
+        class: Cli\CliBundle\Command\TaskUpdateCommand
+        autowire: true
+        tags:
+            - { name: console.command }
+
+
+    command.task.clean:
+        class: Cli\CliBundle\Command\TaskCleanCommand
+        autowire: true
+        tags:
+            - { name: console.command }
